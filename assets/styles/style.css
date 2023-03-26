@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-section {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form {
+  padding: 10px;
+  border: 2px solid #19A7CE;
+  width: 350px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.search-form .search-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.search-form .search-input {
+  padding: 5px;
+  width: 350px;
+  height: 50px;
+  font-size: 18px;
+  border: none;
+}
+.search-form .search-input:focus {
+  outline: none;
+  border: none;
+}
+
+.add-link {
+  font-size: 21px;
+  text-decoration: none;
+  color: black;
+}
+
+.add-link:hover {
+  font-size: 21px;
+  color: black;
+}
+
+.workers-section {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.worker {
+  padding: 0;
+  width: 250px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 4px black;
+}
+.worker .name-surname {
+  display: flex;
+  gap: 4px;
+}
+.worker .name, .worker .surname {
+  font-weight: bolder;
+}
+.worker .box-label {
+  font-size: 18px;
+}
+
+.filters-section {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  justify-content: space-between;
+}
+.filters-section .min-max-salary {
+  display: flex;
+  gap: 10px;
+}
+.filters-section .m-salary {
+  width: 110px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.add-section {
+  position: relative;
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.add-form {
+  position: absolute;
+}/*# sourceMappingURL=style.css.map */
