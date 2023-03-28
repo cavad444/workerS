@@ -18,6 +18,10 @@ const deleteNameInput = document.querySelector('.delete-name-input');
 const deleteSurnameInput = document.querySelector('.delete-surname-input');
 const formControls = document.querySelectorAll('.form-control');
 
+let nameD = "";
+let surnameD = "";
+let parentD;
+
 
 let deletedDatabase = database;
 
@@ -29,6 +33,21 @@ deleteForm.addEventListener('submit', (e) => {
     showWorkers(deletedDatabase, workers);
     deleteForm.reset();
 })
+showWorkers(deletedDatabase, workers);
+const deleteButtons = document.querySelectorAll('.delete-button');
+deleteButtons.forEach(deleteButton => {
+    deleteButton.addEventListener('click', (e) => {
+        parentD = deleteButton.parentElement;
+        nameD = parentD.firstElementChild.firstElementChild.innerText;
+        surnameD = parentD.firstElementChild.lastElementChild.innerText;
+        deletedDatabase = deletedDatabase.filter(worker => worker.name !== nameD && worker.surname !== surnameD);
+        console.log(nameD + surnameD);
+        workers.innerHTML = " ";
+        showWorkers(deletedDatabase, workers);
+    });
+    
+})
+
 
 addForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -92,7 +111,7 @@ selectFilter.addEventListener("change", () => {
 
 
 
-showWorkers(database, workers);
+
 
 
 searchForm.addEventListener("submit",(e) => {

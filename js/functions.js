@@ -15,6 +15,7 @@ export function createWorker(worker){
     </div>
     <span class="box-label position">${worker.position}</span>
     <span class="box-label salary">Salary: ${worker.salary}$</span>
+    <button type="submit" class="btn btn-danger delete-button">Delete</button>
 `;
  return workerDiv;
 }
